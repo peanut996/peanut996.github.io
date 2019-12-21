@@ -1,0 +1,10 @@
+$.ajax({
+    type: "POST",
+    url: 'https://api.hibai.cn/api/index/index',
+    dataType: 'json',
+    data: {"TransCode":"030111","OpenId":"123456789","Body":""},
+    success: function(result){
+        $(".subtitle").text(result.Body.word);
+        return false;
+    }
+});
